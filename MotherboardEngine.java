@@ -7,16 +7,18 @@ public class MotherboardEngine {
 
     public static void main(String[] args)throws IOException
     {
-            populateData();
+        new GUI(populateData());    
+        
     }
     
-    public static void populateData()throws IOException
+    public static Motherboard[] populateData()throws IOException
     {
+        Motherboard[] arr = new Motherboard[10];
         try
         {
             File inFile = new File("input.txt");
             Scanner in = new Scanner(inFile);
-            Motherboard[] arr = new Motherboard[10];
+            
             int i = 0;
             
             while(in.hasNextLine())
@@ -69,11 +71,13 @@ public class MotherboardEngine {
                         break;
                 }while(in.nextLine() != " ");
                 //place into Database array
+                
             }
         }
         catch(FileNotFoundException e)
         {
             System.out.println("Error occurred");
         }
+        return arr;
     }
 }

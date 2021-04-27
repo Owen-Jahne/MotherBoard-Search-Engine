@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import javax.swing.ListSelectionModel;
+
+public  class Library extends MotherBoard {
+   DefaultListModel model = new DefaultListModel();
+
+ public Library() {
+     initComponents();
+     this.bindData();
+     
+    }
+ private ArrayList getColors(){
+     ArrayList colors = new ArrayList();
+     colors.add("blue");
+     colors.add("red");
+     colors.add("black");
+     colors.add("yellow");
+     colors.add("orange");
+     colors.add("pink");
+     colors.add("purple");
+     colors.add("green");
+     colors.add("white");
+     return colors;
+    }
+ private void bindData(){
+        getColors().stream().forEach((color)-> {
+            model.addElement(color);
+        });
+        list.setModel(model);
+        list.setSelectionMode (ListSelectionModel.SINGLE_SELECTION);
+    }
+ public void searchFilter(String searchTerm){
+        DefaultListModel filter = new DefaultListModel();
+        ArrayList colors = getColors();
+        
+        colors.stream().forEach((color) -> {
+            String colorName = color.toString().toLowerCase();
+            if(colorName.contains(searchTerm.toLowerCase())){
+                filter.addElement(color);
+            }
+        });
+         model=filter;
+         list.setModel(model);
+    }
+    @SuppressWarnings("unchecked")
+ private void initComponents(){
+      
+    }
+ private void myJListMouseClicked(java.awt.event.MouseEvent evt){
+         JOptionPane.showMessageDialog(panel,list.getSelectedValue(), "color", JOptionPane.INFORMATION_MESSAGE);
+         
+        }
+ private void searchTxtKeyReleased(java.awt.event.KeyEvent evt){
+     searchFilter(userText1.getText());
+    } 
+ public static void main( String[] args)
+    {
+     
+    }  
+}
+

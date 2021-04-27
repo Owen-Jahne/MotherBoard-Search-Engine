@@ -27,7 +27,7 @@ public class Motherboard
     private int usbCHeaders;
     private int wirelessNet; //0: no support; other: the generation
     private String audioChip;
-    private float msrp;
+    private int msrp;
     private int usb2Ports;
     private int usb3Ports;
     private int usbCPorts;
@@ -140,7 +140,7 @@ public class Motherboard
     {
         return audioChip;
     }
-    public float getPrice()
+    public int getPrice()
     {
         return msrp;
     }
@@ -286,7 +286,7 @@ public class Motherboard
     {
         audioChip = s;
     }
-    public void setPrice(float f)
+    public void setPrice(int f)
     {
         msrp = f;
     }

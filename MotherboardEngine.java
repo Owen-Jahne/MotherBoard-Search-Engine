@@ -7,7 +7,7 @@ public class MotherboardEngine {
 
     public static void main(String[] args)throws IOException
     {
-        populateData();
+            populateData();
     }
     
     public static void populateData()throws IOException
@@ -17,6 +17,7 @@ public class MotherboardEngine {
             File inFile = new File("input.txt");
             Scanner in = new Scanner(inFile);
             Motherboard[] arr = new Motherboard[10];
+            int i = 0;
             
             while(in.hasNextLine())
             {
@@ -63,7 +64,8 @@ public class MotherboardEngine {
                     temp.setOtherIO(in.nextLine());
                     temp.setmainURL(in.nextLine());
                     temp.setCompatURL(in.nextLine());
-                    if (!in.hasNextLine())
+                    arr[i++] = temp;
+		    if (!in.hasNextLine())
                         break;
                 }while(in.nextLine() != " ");
                 //place into Database array

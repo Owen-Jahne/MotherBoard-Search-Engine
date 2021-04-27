@@ -1,3 +1,10 @@
+
+/**
+ * Write a description of class GUI here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
 import java.awt.BorderLayout;
 import java.awt.*;
 import java.awt.event.*;
@@ -27,7 +34,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.JComboBox;
 
-public class MotherBoard implements ActionListener
+public class GUI extends Motherboard implements ActionListener
 {
     JFrame frame = new JFrame();
     JPanel panel = new JPanel();
@@ -37,9 +44,9 @@ public class MotherBoard implements ActionListener
     DefaultListModel list1 = new DefaultListModel();
     JList list = new JList();
     private static String[] colors = {"blue", "black", "red", "green", "purple", "pink", "yellow", "brown"};
-   
+    Object[] JavaObjectArray = {getManu(),getModel(),getChip(),getSock(),getForm()};
         int index;
- public MotherBoard() {
+ public GUI() {
      
      
      frame.setSize(350, 350);
@@ -69,6 +76,7 @@ public class MotherBoard implements ActionListener
      list = new JList(colors);
      
      button1.addActionListener(this);
+     
      list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
      JScrollPane scroll = new JScrollPane(list);
      scroll.setBounds(150, 50, 165, 100);
@@ -81,20 +89,21 @@ public class MotherBoard implements ActionListener
      {
          public void valueChanged(ListSelectionEvent event){
              index = list.getSelectedIndex();
-             System.out.print(index);
+             
             }
         }
      );
-     
+    
     }
 public static void main( String[] args){
-        new MotherBoard();
+        new GUI();
         
     }
     @Override 
 public void actionPerformed(ActionEvent e){
-     
+      System.out.println(JavaObjectArray[index]);
      
       
    }
 }
+

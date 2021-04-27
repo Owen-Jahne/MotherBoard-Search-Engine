@@ -1,0 +1,300 @@
+---
+Start of Motherboard Database
+
+Format:
+
+manufacturer
+model
+chipset
+socket
+formfactor
+memoryslots
+maxramcapacity
+pcie16slots
+pcie8slots
+pcie4slots
+pcie1slots
+sataports
+m2slots
+lanchip
+lanspeed
+onboardvideo
+fan3pin
+fan4pin
+rgbheaders
+argbheaders
+usb2headers
+usb3headers
+usbcheaders
+wirelessnetworking
+audiochipset
+msrp
+usb2ports (back io)
+usb3ports (back io)
+usbcports (back io)
+lanports (back io)
+ps2ports (back io)
+graphicsports (back io)
+audioports (back io)
+otherio (back io)
+manufacturerurl
+compatibilityurl
+
+----
+MSI
+Tomahawk Max
+B450
+AM4
+ATX
+4
+64
+2
+0
+0
+3
+6
+1
+Realtek 8111H
+1000
+1
+0
+5
+2
+0
+4
+2
+0
+0
+Realtek ALC892
+125.00
+2
+1
+1
+1
+1
+DVI-D, HDMI
+HD Audio
+Flash BIOS
+https://www.msi.com/Motherboard/B450-TOMAHAWK-MAX/Overview
+https://www.msi.com/Motherboard/support/B450-TOMAHAWK-MAX#support-cpu
+
+MSI
+Z490-A Pro
+Z490
+LGA1200
+ATX
+4
+128
+2
+0
+0
+3
+6
+2
+Realtek RTL8125B-CG 2.5G
+2500
+1
+0
+8
+1
+2
+2
+2
+1
+0
+Realtek ALC892/ALC897
+170.00
+2
+3
+1
+1
+1
+HDMI, DisplayPort
+HD Audio
+n/a
+https://www.msi.com/Motherboard/Z490-A-PRO/Overview
+https://www.msi.com/Motherboard/support/Z490-A-PRO#support-cpu
+
+ASUS
+ROG STRIX B550-F Gaming Wifi
+B550
+AM4
+ATX
+4
+128
+2
+0
+0
+3
+6
+2
+Intel I225-V 2.5G
+2500
+1
+0
+6
+2
+1
+2
+1
+1
+ROG SupremeFX S1220A
+186.00
+2
+5
+1
+1
+0
+HDMI, DisplayPort
+HD Audio, Optical S/PDIF
+BIOS FlashBack, Wifi antenna
+https://rog.asus.com/us/motherboards/rog-strix/rog-strix-b550-f-gaming-wi-fi-model/
+https://rog.asus.com/us/motherboards/rog-strix/rog-strix-b550-f-gaming-wi-fi-model/spec
+
+ASRock
+B450M Pro4
+B450
+AM4
+Micro-ATX
+4
+128
+2
+0
+0
+1
+4
+2
+Realtek RTL8111H
+1000
+1
+0
+5
+1
+1
+2
+1
+0
+0
+Realtek ALC892
+96.00
+2
+5
+1
+1
+1
+DVI-D, HDMI
+HD Audio
+n/a
+https://www.asrock.com/mb/AMD/B450m%20Pro4/#Overview
+https://www.asrock.com/mb/AMD/B450m%20Pro4/#CPU
+
+Gigabyte
+B550M DS3H (rev.1.x)
+B550
+AM4
+Micro-ATX
+4
+128
+2
+0
+0
+1
+4
+2
+Realtek GbE
+1000
+1
+0
+3
+3
+2
+1
+1
+0
+0
+Realtek ALC887
+103.00
+4
+4
+0
+1
+1
+DVI-D, HDMI
+3 audio jacks
+n/a
+https://www.gigabyte.com/us/Motherboard/B550M-DS3H-rev-1x
+https://www.gigabyte.com/us/Motherboard/B550M-DS3H-rev-1x/support#support-cpu
+
+Gigabyte
+Z390 I Aorus Pro Wifi
+Z390
+LGA1151
+Mini-ITX
+2
+64
+1
+0
+0
+0
+4
+2
+Intel GbE
+1000
+1
+0
+3
+1
+1
+1
+1
+1
+1
+Realtek ALC1220-VB
+192.00
+0
+5
+1
+1
+0
+HDMI, DisplayPort
+HD Audio, Optical S/PDIF
+Wifi antenna
+https://www.gigabyte.com/us/Motherboard/Z390-I-AORUS-PRO-WIFI-rev-10
+https://www.gigabyte.com/us/Motherboard/Z390-I-AORUS-PRO-WIFI-rev-10/support#support-cpu
+
+ASUS
+Prime Z390-A
+Z390
+LGA1151
+ATX
+4
+64
+3
+0
+0
+3
+6
+2
+Intel I219V
+1000
+1
+0
+5
+2
+0
+3
+1
+1
+0
+Realtek ALC S1220A
+263.00
+2
+5
+1
+1
+1
+HDMI, DisplayPort
+HD Audio, Optical S/PDIF
+n/a
+https://www.asus.com/us/Motherboards-Components/Motherboards/All-series/PRIME-Z390-A/
+https://www.asus.com/us/Motherboards-Components/Motherboards/All-series/PRIME-Z390-A/HelpDesk_CPU/

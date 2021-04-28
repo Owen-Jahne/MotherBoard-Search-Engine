@@ -37,19 +37,20 @@ import javax.swing.JComboBox;
 public class GUI extends Motherboard implements ActionListener
 {
     JFrame frame = new JFrame();
-    JPanel panel = new JPanel();
+    JPanel panel = new JPanel(new BorderLayout());
     JLabel label1 = new JLabel("Find your Motherboard: ");
     JTextField userText1 = new JTextField();
     JLabel label2 = new JLabel();
     DefaultListModel list1 = new DefaultListModel();
     JList list = new JList();
-    private static String[] colors = {"blue", "black", "red", "green", "purple", "pink", "yellow"};
-    Object[] JavaObjectArray = {getManu(),getModel(),getChip(),getSock(),getForm()};
-        int index;
- public GUI(Motherboard[] arr) {
-     
-     
-     frame.setSize(350, 350);
+    private static String[] boards = {"blue", "black", "red", "green", "purple",
+        "pink", "yellow"};
+    Object[] JavaObjectArray = {getManu(),getModel(),getChip(),getSock(),
+        getForm()};
+    int index;
+ public GUI(Motherboard[] arr) 
+ {
+     frame.setSize(1350, 750);
      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
      frame.pack();
      frame.setTitle("Motherboard Search Engine");
@@ -76,9 +77,9 @@ public class GUI extends Motherboard implements ActionListener
      
      for (int i = 0; i <= 6; i++)
      {
-         colors[i] = arr[i].getManu() + " " + arr[i].getModel();
+         boards[i] = arr[i].getManu() + " " + arr[i].getModel();
      }
-     list = new JList(colors);
+     list = new JList(boards);
      
      button1.addActionListener(this);
      
@@ -90,17 +91,43 @@ public class GUI extends Motherboard implements ActionListener
      frame.setVisible(true);
      
      list.addListSelectionListener(
-        new ListSelectionListener()
-     {
+        new ListSelectionListener(){
          public void valueChanged(ListSelectionEvent event){
              index = list.getSelectedIndex();
-             
             }
         }
      );
-    
-    }
-    @Override 
+     
+     list.addMouseListener(new MouseAdapter(){
+        public void mouseClicked(MouseEvent e)
+        {
+            JList list = (JList)e.getSource();
+            int i;
+            if (e.getClickCount() == 2)
+             {
+                i = list.locationToIndex(e.getPoint());
+                System.out.println("Double clicked on Item " + index);
+                displayInfo(arr);
+             }
+        }
+    });
+ 
+}
+protected void displayInfo(Motherboard[] arr)
+{
+    JFrame frame = new JFrame();
+    frame.setSize(1350, 750);
+    frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    frame.pack();
+    frame.setTitle(boards[index]);
+    JPanel panel = new JPanel(new BorderLayout());
+    frame.add(panel);
+    frame.setVisible(true);
+    JLabel label = new JLabel(arr[index].toString());
+    label.setBounds(10,20,140,25);
+    panel.add(label);
+}
+@Override 
 public void actionPerformed(ActionEvent e){
       System.out.println(JavaObjectArray[index]);
      

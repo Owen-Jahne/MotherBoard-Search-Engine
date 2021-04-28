@@ -330,4 +330,21 @@ public class Motherboard
     {
         compatURL = s;
     }
+    
+    public String toString()
+    {
+        return  getManu() + "\n" + getModel() + "\n" + getChip() + "\n" + 
+                getSock() + "\n" + getForm() + "\n" + getMemSlot() + "\n" + 
+                getRAM() + "\n" + getPCIE16() + "\n" + getPCIE8() + "\n" + 
+                getPCIE4() + "\n" + getPCIE1() + "\n" + getSATA() + "\n" + 
+                getM2() + "\n" + getLANChip() + "\n" + getLANSpeed() + "\n" + 
+                getVideo() + "\n" + get3Pin() + "\n" + get4Pin() + "\n" + 
+                getRGB() + "\n" + getARGB() + "\n" + getUSB2Headers() + "\n" + 
+                getUSB3Headers() + "\n" + getUSBCHeaders() + "\n" + getWIFI() + "\n" +
+                getAudioChip() + "\n" + getPrice() + "\n" + getUSB2Ports() + "\n" + 
+                getUSB3Ports() + "\n" + getUSBCPorts() + "\n" + getLANIO() + 
+                "\n" + getPS2() + "\n" + getGraphics() + "\n" + getBackAudio()
+                + "\n" + getOtherIO() + "\n" + getMainURL() + "\n" + 
+                getCompatURL();
+    }
 }
